@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Check Me Out</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+    	body {
+    		padding: 25px;
+    		background-color: #eee;
+    	}
+    	select {
+    		padding: 6px;
+    		border-radius: 5px;
+    	}
+    	hr {
+    		border: solid 1px #333;
+    	}
+    	.header-image {
+    		width: 100px;
+    		float: right;
+    	}
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+    <div class="row">
+    	<a href="https://checkmeout.pro"><img src="logo-palace.png" class="header-image"></a>
+    	<nav aria-label="Page navigation">
+			<ul class="pagination">
+				<p>Select region</p>
+				<li><a href="#" id="eu">EU</a></li>
+				<li><a href="#" id="us">US</a></li>
+				<li><a href="#" id="jp">JP</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<!-- <div id="status"></div> -->
+			<h3>
+				Shipping information
+			</h3>
+			<hr>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					 
+					<label for="name" class="col-sm-2 control-label">
+						Name
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="name">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="email" class="col-sm-2 control-label">
+						Email
+					</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="email" required>
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="phone" class="col-sm-2 control-label">
+						Phone
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="phone">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="address" class="col-sm-2 control-label">
+						Address
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="address">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="city" class="col-sm-2 control-label">
+						City
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="city">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="zip" class="col-sm-2 control-label">
+						Zip / Postcode
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="zip">
+					</div>
+				</div>
+				<div class="form-group" id="us-state">
+					 
+					<label for="state" class="col-sm-2 control-label">
+						State / Province
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="state">
+						<p>2 letter code as it appears on Supreme</p>
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="country" class="col-sm-2 control-label">
+						Country
+					</label>
+					<div class="col-sm-10">
+						<select id="country">
+							<option data-code="GB" selected="selected" value="United Kingdom">United Kingdom</option>
+							<option data-code="RU" value="Russia">Russia</option>
+							<option data-code="DE" value="Germany">Germany</option>
+							<option data-code="FR" value="France">France</option>
+							<option disabled="disabled" value="---">---</option>
+							<option data-code="AU" value="Australia">Australia</option>
+							<option data-code="AT" value="Austria">Austria</option>
+							<option data-code="BE" value="Belgium">Belgium</option>
+							<option data-code="BA" value="Bosnia And Herzegovina">Bosnia &amp; Herzegovina</option>
+							<option data-code="HR" value="Croatia">Croatia</option>
+							<option data-code="CZ" value="Czech Republic">Czech Republic</option>
+							<option data-code="DK" value="Denmark">Denmark</option>
+							<option data-code="EE" value="Estonia">Estonia</option>
+							<option data-code="FI" value="Finland">Finland</option>
+							<option data-code="FR" value="France">France</option>
+							<option data-code="DE" value="Germany">Germany</option>
+							<option data-code="GR" value="Greece">Greece</option>
+							<option data-code="HU" value="Hungary">Hungary</option>
+							<option data-code="IS" value="Iceland">Iceland</option>
+							<option data-code="IE" value="Ireland">Ireland</option>
+							<option data-code="IT" value="Italy">Italy</option>
+							<option data-code="JP" value="Japan">Japan</option>
+							<option data-code="LV" value="Latvia">Latvia</option>
+							<option data-code="LT" value="Lithuania">Lithuania</option>
+							<option data-code="LU" value="Luxembourg">Luxembourg</option>
+							<option data-code="MC" value="Monaco">Monaco</option>
+							<option data-code="NL" value="Netherlands">Netherlands</option>
+							<option data-code="NO" value="Norway">Norway</option>
+							<option data-code="PL" value="Poland">Poland</option>
+							<option data-code="PT" value="Portugal">Portugal</option>
+							<option data-code="RO" value="Romania">Romania</option>
+							<option data-code="RU" value="Russia">Russia</option>
+							<option data-code="SK" value="Slovakia">Slovakia</option>
+							<option data-code="SI" value="Slovenia">Slovenia</option>
+							<option data-code="ES" value="Spain">Spain</option>
+							<option data-code="SE" value="Sweden">Sweden</option>
+							<option data-code="CH" value="Switzerland">Switzerland</option>
+							<option data-code="GB" value="United Kingdom">United Kingdom</option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<h3>
+				Payment information
+			</h3>
+			<hr>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					 
+					<label for="card_no" class="col-sm-2 control-label">
+						Card number
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="card_no">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="card_name" class="col-sm-2 control-label">
+						Name on card
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="card_name">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="expiry" class="col-sm-2 control-label">
+						Expiry (MM/YY)
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="expiry">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="cvv" class="col-sm-2 control-label">
+						CVV
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="cvv">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="size" class="col-sm-2 control-label">
+						Size
+					</label>
+					<div class="col-sm-10">
+						<select id="size">
+							<option value="Small">Small</option>
+ 							<option value="Medium">Medium</option>
+ 							<option value="Large">Large</option>
+ 							<option value="XLarge">XLarge</option>
+ 						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" id="autoco"> Auto checkout
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6" id="keyword-section">
+			<h3>
+				Keyword search (BETA use with caution)
+			</h3>
+			<hr>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" id="kw_enabled"> Enabled
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="category" class="col-sm-2 control-label">
+						Category
+					</label>
+					<div class="col-sm-10">
+						<select id="category">
+ 							<option value="jackets">Jackets</option>
+ 							<option value="knitwear">Knitwear</option>
+ 							<option value="trousers">Bottoms</option>
+ 							<option value="tracksuits">Tracksuits</option>
+ 							<option value="tops">Tops</option>
+ 							<option value="sweatshirts">Sweatshirts</option>
+ 							<option value="t-shirts">T-Shirts</option>
+ 							<option value="hats">Hats</option>
+ 							<option value="footwear">Footwear</option>
+ 							<option value="accessories">Accessories</option>
+ 							<option value="hardware">Hardware</option>
+ 						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="keywords" class="col-sm-2 control-label">
+						Keywords
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="keywords">
+						<p>Separated by spaces. Including words that are not in the product description will cause the search to fail.</p>
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="colour" class="col-sm-2 control-label">
+						Colour
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="colour">
+						<p>Separated by spaces. Make your best guesses at the colour name; e.g. red, maroon, burgundy, merlot etc.</p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<h3>
+				Done?
+			</h3>
+			<hr>
+			<div class="form-group">
+
+				<div class="col-sm-10">
+					<div class="checkbox">
+							 
+						<label>
+							<input type="checkbox" id="tc_accepted"> I accept the T&Cs of this software, found <a href="https://checkmeout.pro/terms">here</a>.
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+					<div class="col-sm-10">
+						 
+						<button id="save" class="btn btn-default">
+							Save
+						</button>
+						<br>
+						<div id="status"></div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="options.js"></script>
+    <script src="tc.js"></script>
+    <script src="country.js"></script>
+  </body>
+</html>

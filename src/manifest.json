@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name":    "Check Me Out Palace Bot",
+    "version": "0.1",
+    "description": "An advanced bot extension for Palace. Keywords, colour/size selection, auto-fill and auto-checkout.",
+    "icons": {"128": "logo-128.png"},
+
+    "content_scripts": [{
+        "matches": ["*://*.palaceskateboards.com/*"],
+        "js":      ["popup.js", "bot.js", "js/jquery.min.js"]
+    }],
+    "background": {
+        "scripts": ["bot.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "Check Me Out for Palace",
+        "default_icon": "logo-128.png",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "permissions": ["activeTab", "storage"]
+}
