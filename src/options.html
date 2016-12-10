@@ -34,14 +34,6 @@
     <div class="container-fluid">
     <div class="row">
     	<a href="https://checkmeout.pro"><img src="logo-palace.png" class="header-image"></a>
-    	<nav aria-label="Page navigation">
-			<ul class="pagination">
-				<p>Select region</p>
-				<li><a href="#" id="eu">EU</a></li>
-				<li><a href="#" id="us">US</a></li>
-				<li><a href="#" id="jp">JP</a></li>
-			</ul>
-		</nav>
 	</div>
 
 	<div class="row">
@@ -54,11 +46,20 @@
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
 					 
-					<label for="name" class="col-sm-2 control-label">
-						Name
+					<label for="firstname" class="col-sm-2 control-label">
+						First name
 					</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="name">
+						<input type="text" class="form-control" id="firstname">
+					</div>
+				</div>
+				<div class="form-group">
+					 
+					<label for="lastname" class="col-sm-2 control-label">
+						Last name
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="lastname">
 					</div>
 				</div>
 				<div class="form-group">
@@ -239,7 +240,7 @@
 <div class="row">
 	<div class="col-md-6" id="keyword-section">
 			<h3>
-				Keyword search (BETA use with caution)
+				Keyword search
 			</h3>
 			<hr>
 			<form class="form-horizontal" role="form">
@@ -284,16 +285,6 @@
 						<p>Separated by spaces. Including words that are not in the product description will cause the search to fail.</p>
 					</div>
 				</div>
-				<div class="form-group">
-					 
-					<label for="colour" class="col-sm-2 control-label">
-						Colour
-					</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="colour">
-						<p>Separated by spaces. Make your best guesses at the colour name; e.g. red, maroon, burgundy, merlot etc.</p>
-					</div>
-				</div>
 			</form>
 		</div>
 		<div class="col-md-6">
@@ -330,6 +321,5 @@
     <script src="js/scripts.js"></script>
     <script src="options.js"></script>
     <script src="tc.js"></script>
-    <script src="country.js"></script>
   </body>
 </html>

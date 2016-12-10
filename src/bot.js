@@ -53,7 +53,7 @@ if (url_split[url_split.length-2] == "collections" && url_split.length == 5) {
 
 // if on item page, select colour, size and navigate to checkout
 // regex to verify 9 character alphanumeric string
-if (url_split[url_split.length-2] == "products" && url_split.length == 7) {
+if (url_split[url_split.length-2] == "products") { // && url_split.length == 7) {
 	chrome.storage.sync.get({
 		region: '',
 		size: '',
@@ -70,10 +70,10 @@ if (url_split[url_split.length-2] == "products" && url_split.length == 7) {
 	});
 
 	// add to basket
-	setTimeout(function(){document.getElementsByName("button")[0].click();}, 1000);
+	setTimeout(function(){document.getElementsByName("button")[0].click();}, 1500);
 
 	// go to checkout
-	setTimeout(function(){window.location.href = "https://shop.palaceskateboards.com/cart";}, 1010);
+	setTimeout(function(){window.location.href = "https://shop.palaceskateboards.com/cart";}, 2000);
 	chrome.storage.sync.set({runnable: false}, function() {});
 }
 
@@ -84,11 +84,13 @@ if (url_split[url_split.length-1] == "cart") {
 }
 
 // if on checkout page, autofill data
-if (/^([a-zA-Z0-9]{32})$/.test(url_split[url_split.length-1])) {
+// if (/^([a-zA-Z0-9]{32})$/.test(url_split[url_split.length-1])) {
+if (url_split[url_split.length-2] == "checkouts") {
   	chrome.storage.sync.get({
   		region: '',
 
-    	name: '',
+    	firstname: '',
+    	lastname: '',
     	email: '',
     	phone: '',
     	address: '',
@@ -104,8 +106,8 @@ if (/^([a-zA-Z0-9]{32})$/.test(url_split[url_split.length-1])) {
 	  }, 
 	  function(items) {
 	  	document.getElementById("checkout_email").value = items.email;
-	    document.getElementById('checkout_shipping_address_first_name').value = items.first_name;
-	    document.getElementById('checkout_shipping_address_last_name').value = items.last_name;
+	    document.getElementById('checkout_shipping_address_first_name').value = items.firstname;
+	    document.getElementById('checkout_shipping_address_last_name').value = items.lastname;
 	    document.getElementById("checkout_shipping_address_address1").value = items.address;
 	    document.getElementById("checkout_shipping_address_city").value = items.city;
 	    document.getElementById("checkout_shipping_address_country").value = items.country;

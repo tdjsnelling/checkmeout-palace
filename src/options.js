@@ -1,6 +1,7 @@
 // Saves options to chrome.storage
 function save_options() {
-  var name = document.getElementById("name").value;
+  var firstname = document.getElementById("firstname").value;
+  var lastname = document.getElementById("lastname").value;
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone").value;
   var address = document.getElementById("address").value;
@@ -19,11 +20,10 @@ function save_options() {
   var kw_enabled = document.getElementById("kw_enabled").checked;
   var category = document.getElementById("category").value;
   var keywords = document.getElementById("keywords").value;
-  var colour = document.getElementById("colour").value;
-  //var tc_accepted = document.getElementById("tc_accepted").checked;
 
   chrome.storage.sync.set({
-	name: name,
+	firstname: firstname,
+	lastname: lastname,
 	email: email,
 	phone: phone,
 	address: address,
@@ -41,9 +41,7 @@ function save_options() {
 
 	kw_enabled: kw_enabled,
 	category: category,
-	keywords: keywords,
-	colour: colour,
-	//tc_accepted: tc_accepted
+	keywords: keywords
   }, 
   function() {
 	// Update status to let user know options were saved.
@@ -60,7 +58,8 @@ function save_options() {
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-	name: '',
+	firstname: '',
+	lastname: '',
 	email: '',
 	phone: '',
 	address: '',
@@ -78,12 +77,11 @@ function restore_options() {
 
 	kw_enabled: '',
 	category: '',
-	keywords: '',
-	colour: '',
-	//tc_accepted: ''
+	keywords: ''
   }, 
   function(items) {
-	document.getElementById('name').value = items.name;
+	document.getElementById('firstname').value = items.firstname;
+	document.getElementById('lastname').value = items.lastname;
 	document.getElementById("email").value = items.email;
 	document.getElementById("phone").value = items.phone;
 	document.getElementById("address").value = items.address;
@@ -102,8 +100,6 @@ function restore_options() {
 	document.getElementById("kw_enabled").checked = items.kw_enabled;
 	document.getElementById("category").value = items.category;
 	document.getElementById("keywords").value = items.keywords;
-	document.getElementById("colour").value = items.colour;
-	//document.getElementById("tc_accepted").checked = items.tc_accepted;
   });
 }
 
